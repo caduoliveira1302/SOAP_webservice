@@ -1,7 +1,10 @@
 # Integrantes
 Abdul Malik de Barros RA00306190
+
 Ana Carolina Zhang RA00297689
+
 Carlos Eduardo de Oliveira RA00297792
+
 Eduardo Furlani Rodrigues RA00297677
 
 # 1.Conceito

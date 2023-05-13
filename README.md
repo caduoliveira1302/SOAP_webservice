@@ -19,7 +19,7 @@ middleware é responsável por controlar a comunicação entre o usuário e o se
 
 # Descrição POC
 
-No primeiro código é um exemplo de como utilizar o Zeep, uma biblioteca Python para trabalhar com serviços web SOAP, para obter informações detalhadas sobre países.
+No primeiro código ("using a soap webservice") é um exemplo de como utilizar o Zeep, uma biblioteca Python para trabalhar com serviços web SOAP, para obter informações detalhadas sobre países.
 
 Primeiramente, o código lê um arquivo JSON chamado "info.json" contendo uma lista de códigos ISO de países. Em seguida, os códigos ISO são convertidos em um DataFrame do Pandas.
 
@@ -31,7 +31,7 @@ Depois de obter as informações detalhadas de todos os países, o código utili
 
 Finalmente, o código imprime as primeiras linhas do DataFrame para que possamos ver algumas das informações que foram coletadas.
 
-Já no segundo código, é uma implementação de uma requisição de serviço SOAP utilizando a biblioteca Requests e ElementTree do Python. Oobjetivo dessa requisição é converter uma temperatura em graus Celsius para Fahrenheit usando um serviço disponibilizado no site W3Schools.
+Já no segundo código ("SOAP API request"), é uma implementação de uma requisição de serviço SOAP utilizando a biblioteca Requests e ElementTree do Python. O objetivo dessa requisição é converter uma temperatura em graus Celsius para Fahrenheit usando um serviço disponibilizado no site W3Schools.
 
 A função soap_api_request recebe como parâmetro a temperatura em graus Celsius a ser convertida para Fahrenheit. Em seguida, é construídauma mensagem SOAP, que contém as informações necessárias para realizar a conversão. Essa mensagem é enviada para a URL do serviçousando o método HTTP POST, com o cabeçalho definido como Content-Type: text/xml; charset=utf-8.
 

@@ -7,7 +7,7 @@ Carlos Eduardo de Oliveira RA00297792
 
 Eduardo Furlani Rodrigues RA00297677
 
-# 1.Conceito
+# Conceito
 
 O protocolo SOAP é uma tecnologia amplamente utilizada em sistemas distribuídos e faz parte da arquitetura orientada a serviços (SOA). A
 utilização de tecnologias baseadas em XML, como WSDL e XSD, permite a estruturação e validação dos dados trocados entre os aplicativos,
@@ -16,12 +16,6 @@ utilizado para troca de informações entre aplicativos. XML: Linguagem de marca
 Linguagem utilizada para descrever serviços web, especificando como acessar e utilizar esses serviços. Com base na biblioteca usada, o Zeep,
 como não possui middleware por padrão, porém, criamos "Transport" com um tempo limite (timeout) de 10 segundos, valendo ressaltar que o
 middleware é responsável por controlar a comunicação entre o usuário e o servidor.
-
-# 2.Prática
-
-O SOAP é um protocolo de transferência de dados e o Selenium é uma ferramenta de automação de testes em navegadores. No entanto, usamos
-o Selenium para interagir com a interface do usuário do WebService, isto é, usamos o Selenium para navegar até a página do serviço da Web e
-preencher os campos do formulário
 
 # Descrição POC
 

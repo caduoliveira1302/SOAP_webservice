@@ -19,15 +19,23 @@ middleware é responsável por controlar a comunicação entre o usuário e o se
 
 # Descrição POC
 
-Este código é um exemplo de como utilizar o Selenium e o Zeep para obter informações de um país por meio de um serviço da Web SOAP.
+No primeiro código é um exemplo de como utilizar o Zeep, uma biblioteca Python para trabalhar com serviços web SOAP, para obter informações detalhadas sobre países.
 
-A biblioteca Selenium é usada para automatizar interações com um navegador da Web. Neste código, a página da Web contendo o formulário é carregada usando o Selenium. Em seguida, o campo do país é preenchido com o valor "US" e o botão de pesquisa é clicado para obter informações sobre os Estados Unidos.
+Primeiramente, o código lê um arquivo JSON chamado "info.json" contendo uma lista de códigos ISO de países. Em seguida, os códigos ISO são convertidos em um DataFrame do Pandas.
 
-O Zeep é uma biblioteca Python para trabalhar com serviços da Web SOAP. Neste código, ele é usado para chamar a função FullCountryInfo do serviço da Web, passando "US" como parâmetro. O resultado é armazenado na variável "result" e impresso no console.
+Depois disso, o código configura o Zeep para se comunicar com o serviço web SOAP fornecido pela URL. O Zeep é configurado com um middleware de transporte com um tempo limite de 10 segundos.
 
-Ao usar SOAP, é necessário especificar a URL do WSDL do serviço da Web, que contém a descrição dos métodos disponíveis e dos parâmetros esperados.
+Em seguida, o código chama o método "FullCountryInfo" do serviço web SOAP para cada código ISO de país na coluna "sISOCode" do DataFrame. O resultado de cada chamada é adicionado a uma lista chamada "country_list".
 
-No geral, este código é uma prova de conceito (POC) de como combinar o Selenium e o Zeep para automatizar a interação com um formulário da Web e chamar um serviço da Web SOAP para obter informações sobre um país.
+Depois de obter as informações detalhadas de todos os países, o código utiliza o helper "serialize_object" do Zeep para converter a lista de objetos "tCountryInfo" retornada pelo serviço web em um dicionário Python. O dicionário é então convertido em um DataFrame do Pandas para que as informações possam ser facilmente analisadas e manipuladas.
+
+Finalmente, o código imprime as primeiras linhas do DataFrame para que possamos ver algumas das informações que foram coletadas.
+
+Já no segundo código, é uma implementação de uma requisição de serviço SOAP utilizando a biblioteca Requests e ElementTree do Python. Oobjetivo dessa requisição é converter uma temperatura em graus Celsius para Fahrenheit usando um serviço disponibilizado no site W3Schools.
+
+A função soap_api_request recebe como parâmetro a temperatura em graus Celsius a ser convertida para Fahrenheit. Em seguida, é construídauma mensagem SOAP, que contém as informações necessárias para realizar a conversão. Essa mensagem é enviada para a URL do serviçousando o método HTTP POST, com o cabeçalho definido como Content-Type: text/xml; charset=utf-8.
+
+A resposta do serviço é recebida como uma string, que é então analisada com o módulo ElementTree para extrair o resultado da conversão, que éretornado em graus Fahrenheit como uma string formatada na função.
 
 # Referências bibliográficas
 
